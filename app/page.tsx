@@ -2,8 +2,15 @@
 
 import { motion } from 'framer-motion';
 import { Code, Rocket, Laptop, Smartphone, TabletSmartphone, Code2 } from 'lucide-react';
+import { ReactNode } from 'react';
 
-const FloatingElement = ({ children, className = "", delay = 0 }) => (
+interface FloatingElementProps {
+  children: ReactNode;
+  className?: string;
+  delay?: number;
+}
+
+const FloatingElement = ({ children, className = "", delay = 0 }: FloatingElementProps) => (
   <motion.div
     initial={{ y: 0 }}
     animate={{ 
@@ -21,6 +28,8 @@ const FloatingElement = ({ children, className = "", delay = 0 }) => (
     {children}
   </motion.div>
 );
+
+// Rest of your code remains exactly the same
 
 export default function Home() {
   const fadeInUp = {
@@ -40,7 +49,7 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen relative bg-[#FF5353] flex items-center overflow-hidden">
+      <section className="min-h-screen relative bg-[#140941] flex items-center overflow-hidden">
         {/* Background Patterns */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 opacity-10">
@@ -96,7 +105,7 @@ export default function Home() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-white text-[#FF5353] px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+              className="bg-transparent text-[#F90040] px-8 py-4 border-2 border-[#F90040] rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg"
             >
               Start Your Journey
             </motion.button>
