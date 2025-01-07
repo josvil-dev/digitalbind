@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Code, Rocket, Laptop, Smartphone, TabletSmartphone, Code2 } from 'lucide-react';
+import { Code, Rocket, Laptop, Smartphone, Code2 } from 'lucide-react';
 import { ReactNode } from 'react';
 
 interface FloatingElementProps {
