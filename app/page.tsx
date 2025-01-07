@@ -100,7 +100,7 @@ export default function Home() {
               Transform Your Digital Presence
             </h1>
             <p className="text-xl text-white/90 mb-8">
-              South Africa's premier digital agency crafting innovative marketing solutions that drive results.
+              South Africas premier digital agency crafting innovative marketing solutions that drive results.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -254,7 +254,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl font-bold text-white mb-8">Ready to Transform Your Business?</h2>
             <p className="text-gray-300 mb-8">
-              Let's discuss how we can help you achieve your digital marketing goals.
+              Lets discuss how we can help you achieve your digital marketing goals.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
