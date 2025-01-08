@@ -52,12 +52,16 @@ export default function Home() {
       <section className="min-h-screen relative bg-[#140941] flex items-center overflow-hidden">
         {/* Background Patterns */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 opacity-40">
             {/* Code Snippets */}
             <div className="absolute top-20 left-10 text-white font-mono text-sm">
+            innovation.start();</div>
+            <div className="absolute bottom-10 right-20 text-white font-mono text-sm">
               const future = await transform(business);</div>
-            <div className="absolute bottom-40 right-20 text-white font-mono text-sm">
-              innovation.start();</div>
+              <div className="absolute bottom-8 right-20 text-white font-mono text-sm">
+              const success = await grow(business);</div>
+              <div className="absolute bottom-32 right-4 text-white font-mono text-sm">
+              const future = await transform(business);</div>
             <div className="absolute top-40 right-32 text-white font-mono text-sm">
               digital.solutions++;</div>
           </div>

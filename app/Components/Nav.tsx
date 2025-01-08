@@ -46,9 +46,9 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#140941] shadow-sm fixed w-full top-0 z-50">
+    <nav className="bg-[#F90040] shadow-sm fixed w-full top-0 z-20">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-24">
+        <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -58,11 +58,11 @@ const Navbar = () => {
           >
             <div className="flex items-center">
               <Image
-                src="/dbicon.png"
+                src="/dbiconwhite.png"
                 alt="Logo"
                 width={140}
                 height={40}
-                className="w-auto h-12"
+                className="w-auto h-20"
                 unoptimized={true}
               />
             </div>
@@ -77,7 +77,7 @@ const Navbar = () => {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.1 }}
-                className="text-gray-700 hover:text-blue-600 px-4 py-3 text-lg font-medium transition-colors duration-200 hover:bg-gray-50 rounded-md"
+                className="text-white hover:text-[#140941] px-4 py-3 text-lg font-semibold transition-colors duration-200"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -90,7 +90,7 @@ const Navbar = () => {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-3 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+            className="md:hidden p-3 rounded-md text-white font-bold hover:text-gray-900"
           >
             <AnimatePresence mode="wait">
               {isOpen ? (
@@ -111,7 +111,7 @@ const Navbar = () => {
             animate="open"
             exit="closed"
             variants={menuVariants}
-            className="md:hidden bg-white border-t"
+            className="md:hidden bg-[#F90040] justify-between border-t"
           >
             <div className="px-6 py-4 space-y-3">
               {navItems.map((item, i) => (
@@ -120,8 +120,8 @@ const Navbar = () => {
                   href={item.href}
                   custom={i}
                   variants={linkVariants}
-                  className="block text-gray-700 hover:text-blue-600 hover:bg-gray-50 px-4 py-3 rounded-md text-lg font-medium transition-colors duration-200"
-                  whileHover={{ x: 10 }}
+                  className="block text-white hover:text-[#152042] px-auto py-3 rounded-md text-lg font-semibold transition-colors duration-200"
+                  whileHover={{ x: 4 }}
                 >
                   {item.label}
                 </motion.a>
