@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { Code, Rocket, Laptop, Smartphone, Code2 } from 'lucide-react';
 import { ReactNode } from 'react';
+import AnimatedText from './Components/AnimatedText';
+import LogoRibbon from './Components/Ribbon';
 
 interface FloatingElementProps {
   children: ReactNode;
@@ -54,13 +56,9 @@ export default function Home() {
         <div className="absolute inset-0">
           <div className="absolute inset-0 opacity-40">
             {/* Code Snippets */}
-            <div className="absolute top-20 left-10 text-white font-mono text-sm">
+            <div className="absolute top-40 left-16 text-white font-mono text-sm">
             innovation.start();</div>
-            <div className="absolute bottom-10 right-20 text-white font-mono text-sm">
-              const future = await transform(business);</div>
-              <div className="absolute bottom-8 right-20 text-white font-mono text-sm">
-              const success = await grow(business);</div>
-              <div className="absolute bottom-32 right-4 text-white font-mono text-sm">
+            <div className="absolute bottom-10 right-32 text-white font-mono text-sm">
               const future = await transform(business);</div>
             <div className="absolute top-40 right-32 text-white font-mono text-sm">
               digital.solutions++;</div>
@@ -74,6 +72,9 @@ export default function Home() {
 
         <FloatingElement className="top-40 right-[20%] text-white/20" delay={1}>
           <div className="w-16 h-16 border-4 border-white/20 rounded-lg rotate-12" />
+        </FloatingElement>
+        <FloatingElement className="top-80 right-[28%] text-white/20" delay={1}>
+          <Code2 size={75} />
         </FloatingElement>
 
         <FloatingElement className="bottom-32 left-[25%] text-white/20" delay={2}>
@@ -100,28 +101,27 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="text-center lg:text-left lg:w-2/3"
           >
-            <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
-              Transform Your Digital Presence
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
+            <AnimatedText />
+            <p className="text-2xl text-white/90 mb-16">
               South Africas premier digital agency crafting innovative marketing solutions that drive results.
             </p>
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-transparent text-[#F90040] px-8 py-4 border-2 border-[#F90040] rounded-full text-lg font-semibold hover:bg-gray-100 transition-colors duration-300 shadow-lg"
+              className="bg-[#F90040] text-white px-8 py-4 border-2 border-[#F90040] rounded-full text-lg font-bold hover:border-white transition-colors duration-300 shadow-lg"
             >
               Start Your Journey
             </motion.button>
           </motion.div>
         </div>
-
+        
         {/* Additional Decorative Elements */}
         <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black/10 to-transparent" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
+        
       </section>
-
+      <LogoRibbon />
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <motion.div
@@ -155,8 +155,10 @@ export default function Home() {
                   <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                   <p className="text-gray-600">
                     Innovative solutions tailored to your business needs, driving growth and engagement.
-                  </p>
+                  </p> 
+                   
                 </motion.div>
+              
               );
             })}
           </div>
