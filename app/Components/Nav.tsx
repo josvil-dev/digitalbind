@@ -69,7 +69,7 @@ const Navbar = () => {
       scrolled ? 'bg-[#F90040] p-2' : 'bg-transparent mt-12'
     }`}>
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-12">
           {/* Logo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -83,7 +83,7 @@ const Navbar = () => {
                 alt="Logo"
                 width={140}
                 height={40}
-                className="w-auto h-20"
+                className="w-auto h-16"
                 unoptimized={true}
               />
             </div>

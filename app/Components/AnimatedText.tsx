@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const AnimatedText = () => {
-  const words = [ 'Web Dev', 'Design', 'Marketing','SEO', 'Branding', 'Graphics', 'Media'];
+  const words = [ 'Websites Development', 'Graphic Design', 'Digital Marketing','Search EEngine Optimazation', 'Branding Strategy', 'Media Production'];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
