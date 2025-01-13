@@ -19,7 +19,7 @@ const AnimatedText = () => {
 
   return (
     
-        <h1 className="text-5xl lg:text-8xl font-bold text-white mb-12 mt-18">
+        <h1 className="text-5xl lg:text-8xl font-bold text-white mb-6 lg:mt-18">
           <span>Your partner in all things </span>
           <span
             className={`inline-block transition-all duration-500 ${

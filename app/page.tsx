@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Code, Rocket, Laptop, Smartphone, Code2 } from 'lucide-react';
 import { ReactNode } from 'react';
 import AnimatedText from './Components/AnimatedText';
-import LogoRibbon from './Components/Ribbon';
 
 interface FloatingElementProps {
   children: ReactNode;
@@ -51,20 +50,8 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen relative bg-[#140941] flex items-center overflow-hidden">
+      <section className="min-h-[43rem]  relative bg-[#140941] flex items-center overflow-hidden">
         {/* Background Patterns */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 opacity-40">
-            {/* Code Snippets */}
-            <div className="absolute top-40 left-16 text-white font-mono text-sm">
-            innovation.start();</div>
-            <div className="absolute bottom-10 right-32 text-white font-mono text-sm">
-              const future = await transform(business);</div>
-            <div className="absolute top-40 right-32 text-white font-mono text-sm">
-              digital.solutions++;</div>
-          </div>
-        </div>
-
         {/* Floating Elements */}
         <FloatingElement className="top-20 left-[15%] text-white/20">
           <Code2 size={48} />
@@ -94,7 +81,7 @@ export default function Home() {
         </FloatingElement>
 
         {/* Main Content */}
-        <div className="container mx-auto px-6 relative z-10">
+        <div className="container mx-auto px-6 mt-32 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -102,7 +89,7 @@ export default function Home() {
             className="text-center lg:text-left lg:w-2/3"
           >
             <AnimatedText />
-            <p className="text-2xl text-white/90 mb-16">
+            <p className="text-xl text-white/90 mb-8">
               South Africas premier digital agency crafting innovative marketing solutions that drive results.
             </p>
             <motion.button
@@ -121,7 +108,6 @@ export default function Home() {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-black/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
         
       </section>
-      <LogoRibbon />
       {/* Services Section */}
       <section className="py-20 bg-gray-50">
         <motion.div
