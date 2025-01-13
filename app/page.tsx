@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Code, Rocket, Laptop, Smartphone, Code2 } from 'lucide-react';
 import { ReactNode } from 'react';
 import AnimatedText from './Components/AnimatedText';
+import ServicesGrid from './Components/SevicesGrid';
 
 interface FloatingElementProps {
   children: ReactNode;
@@ -109,7 +110,7 @@ export default function Home() {
         
       </section>
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="pt-8 pb-20 bg-gray-50">
         <motion.div
           variants={staggerContainer}
           initial="initial"
@@ -117,38 +118,18 @@ export default function Home() {
           viewport={{ once: true }}
           className="container mx-auto px-6"
         >
-          <motion.h2 
+       
+          <motion.h1 
             variants={fadeInUp}
-            className="text-4xl font-bold text-center mb-16 text-gray-900"
+            className="text-2xl font-bold text-start mb-4 lg:text-3xl text-gray-900"
           >
-            Our Digital Solutions
-          </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { icon: Code, title: "Web Development" },
-              { icon: Rocket, title: "Digital Marketing" },
-            ].map((service, index) => {
-              const IconComponent = service.icon;
-              return (
-                <motion.div
-                  key={index}
-                  variants={fadeInUp}
-                  className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="text-[#FF5353] mb-4">
-                    <IconComponent size={32} />
-                  </div>
-                  <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                  <p className="text-gray-600">
-                    Innovative solutions tailored to your business needs, driving growth and engagement.
-                  </p> 
-                   
-                </motion.div>
-              
-              );
-            })}
-          </div>
+          <span className="text-blue-100 font-bold "> Digital Bind</span> is a full-statck digital creative agency.
+          </motion.h1>
+         <p>We are a digital marketing agency specialising in solving business challenges through the use of creativity and technology. We deliver personalised solutions tailored to your unique customers’ profile, your budget and your goals.</p> 
+          
         </motion.div>
+
+        <ServicesGrid />
       </section>
 
       {/* About Section */}

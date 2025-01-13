@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 
 const AnimatedText = () => {
-  const words = [ 'Websites Development', 'Graphic Design', 'Digital Marketing','Search EEngine Optimazation', 'Branding Strategy', 'Media Production'];
+  const words = [ 'Websites', 'Designs', 'Marketing','SEO', 'Branding', 'Media'];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isAnimating, setIsAnimating] = useState(true);
 
@@ -19,7 +19,7 @@ const AnimatedText = () => {
 
   return (
     
-        <h1 className="text-5xl lg:text-8xl font-bold text-white mb-6 lg:mt-18">
+        <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6 lg:mt-18">
           <span>Your partner in all things </span>
           <span
             className={`inline-block transition-all duration-500 ${
